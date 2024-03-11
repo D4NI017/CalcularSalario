@@ -69,58 +69,58 @@ public class DiasLluvia {
         }
     }
 
-    static int primerDiaLluvia(int dia, int mes){
+    static int primerDiaLluvia(){
         int diasTotales = 0;
 
         for (int i = 0; i < calendario.length; i++) {
             for (int j = 0; j < calendario.length; j++) {
-                if (calendario[mes][dia]){
+                if (calendario[i][j]){
 
-                    if (mes == 0){ //CALCULAR ENERO
+                    if (i == 0){ //CALCULAR ENERO
                         diasTotales = j;
                     }
 
-                    if (mes == 1){ //CALCULAR FEBRERO
+                    if (i == 1){ //CALCULAR FEBRERO
                         diasTotales = 31 + j;
                     }
 
-                    if (mes == 2 ){ //CALCULAR MARZO
+                    if (i == 2 ){ //CALCULAR MARZO
                         diasTotales = 31+ 28 + j;
                     }
 
-                    if (mes == 3){ //CALCULAR ABRIL
+                    if (i == 3){ //CALCULAR ABRIL
                         diasTotales = 28 + (31*2) + j;
                     }
 
-                    if (mes == 4){ //CALCULAR MAYO
+                    if (i == 4){ //CALCULAR MAYO
                         diasTotales = 28 + (31 * 2) + 30 + j;
                     }
 
-                    if (mes == 5){ //CALCULAR JUNIO
+                    if (i == 5){ //CALCULAR JUNIO
                         diasTotales = 28 + (31 * 3) + 30 + j;
                     }
 
-                    if (mes == 6){ //CALCULAR JULIO
+                    if (i == 6){ //CALCULAR JULIO
                         diasTotales = 28 + (31 * 3) + (30*2) + j;
                     }
 
-                    if (mes == 7){ //CALCULAR AGOSTO
+                    if (i == 7){ //CALCULAR AGOSTO
                         diasTotales = 28 + (31 * 4) + (30*2) + j;
                     }
 
-                    if (mes == 8){ //CALCULAR SEPTIEMBRE
+                    if (i == 8){ //CALCULAR SEPTIEMBRE
                         diasTotales = 28 + (31 * 4) + (30*3) + j;
                     }
 
-                    if (mes == 9){ //CALCULAR OCTUBRE
+                    if (i == 9){ //CALCULAR OCTUBRE
                         diasTotales = 28 + (31 * 4) + (30*4) + j;
                     }
 
-                    if (mes == 10){ //CALCULAR NOVIEMBRE
+                    if (i == 10){ //CALCULAR NOVIEMBRE
                         diasTotales = 28 + (31 * 5) + (30*4) + j;
                     }
 
-                    if (mes == 11){ //CALCULAR DICIEMBRE
+                    if (i == 11){ //CALCULAR DICIEMBRE
                         diasTotales = 28 + (31 * 5) + (30*5) + j;
                     }
                 }

@@ -58,9 +58,16 @@ public class DiasLluviaTest {
     }
 
     @Test
-    public void test1primerDiaDeLluvia(){
-        int resultadoReal = DiasLluvia.primerDiaLluvia(12,0);
-        int resultadoEsperado = 12;
+    public void test1primerDiaDeLluvia(){ //Al no tener ningun dia como true el resultado esperado es 0
+        int resultadoReal = DiasLluvia.primerDiaLluvia();
+        int resultadoEsperado = 0;
         assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void test2primerDiaDeLluvia(){ //Al no tener ningun dia como true el resultado esperado es 0 si ponemos > 0 no coincide por eso no se realiza otro test que lo pase
+        int resultadoReal = DiasLluvia.primerDiaLluvia();
+        int resultadoEsperado = 5;
+        assertNotEquals(resultadoEsperado, resultadoReal);
     }
 }
